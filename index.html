@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <!-- Importing Elegant Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -22,8 +25,8 @@
             --pure-white: #ffffff;
             --soft-gray: #f5f5f5;
             --text-gray: #555555;
-            --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
-            --shadow-luxury: 0 20px 40px rgba(0,0,0,0.2);
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-luxury: 0 20px 40px rgba(0, 0, 0, 0.2);
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
@@ -45,14 +48,29 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Playfair Display', serif;
             color: var(--emerald-green);
         }
 
-        a { text-decoration: none; color: inherit; transition: var(--transition); }
-        ul { list-style: none; }
-        img { width: 100%; display: block; object-fit: cover; }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
 
         /* --- UI COMPONENTS --- */
         .btn {
@@ -74,27 +92,37 @@
         .btn::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 0%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
             background: var(--emerald-green);
             z-index: -1;
             transition: var(--transition);
         }
 
-        .btn:hover::before { width: 100%; }
-        .btn:hover { box-shadow: 0 5px 15px rgba(0, 77, 64, 0.3); }
+        .btn:hover::before {
+            width: 100%;
+        }
 
-        .section-padding { padding: 80px 10%; }
-        
+        .btn:hover {
+            box-shadow: 0 5px 15px rgba(0, 77, 64, 0.3);
+        }
+
+        .section-padding {
+            padding: 80px 10%;
+        }
+
         .section-header {
             text-align: center;
             margin-bottom: 60px;
         }
-        
+
         .section-header h2 {
             font-size: 2.5rem;
             margin-bottom: 15px;
         }
-        
+
         .section-header .divider {
             width: 80px;
             height: 3px;
@@ -115,7 +143,7 @@
             transition: var(--transition);
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .logo {
@@ -125,9 +153,15 @@
             color: var(--emerald-green);
         }
 
-        .logo span { color: var(--primary-gold); }
+        .logo span {
+            color: var(--primary-gold);
+        }
 
-        .nav-links { display: flex; gap: 40px; }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
         .nav-links a {
             font-size: 0.9rem;
             font-weight: 500;
@@ -138,19 +172,24 @@
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px; left: 0; width: 0; height: 2px;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
             background-color: var(--primary-gold);
             transition: var(--transition);
         }
 
-        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
         /* --- HERO SECTION (FIXED) --- */
         .hero {
             height: 100vh;
             min-height: 600px;
             /* Fallback dark color in case image fails */
-            background-color: var(--deep-black); 
+            background-color: var(--deep-black);
             /* Reliable Unsplash Image */
             background-image: url('https://images.unsplash.com/photo-1512453979798-5ea904ac66de?q=80&w=1920&auto=format&fit=crop');
             background-size: cover;
@@ -168,14 +207,18 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
 
         .hero-content {
             position: relative;
-            z-index: 2; /* Places content above the dark overlay */
+            z-index: 2;
+            /* Places content above the dark overlay */
             max-width: 800px;
             padding: 0 20px;
             animation: fadeUp 1s ease-out;
@@ -185,7 +228,7 @@
             font-size: 4rem;
             color: var(--pure-white);
             margin-bottom: 20px;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .hero p {
@@ -201,7 +244,7 @@
             border-radius: 4px;
             display: flex;
             gap: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             flex-wrap: wrap;
         }
 
@@ -220,7 +263,8 @@
             text-transform: uppercase;
         }
 
-        .input-group select, .input-group input {
+        .input-group select,
+        .input-group input {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
@@ -228,7 +272,8 @@
             outline: none;
         }
 
-        .input-group select:focus, .input-group input:focus {
+        .input-group select:focus,
+        .input-group input:focus {
             border-color: var(--primary-gold);
         }
 
@@ -283,13 +328,15 @@
             border-color: var(--primary-gold);
         }
 
-        .plan-zone:hover img { opacity: 0.8; }
+        .plan-zone:hover img {
+            opacity: 0.8;
+        }
 
         .zone-label {
             position: absolute;
             bottom: 15px;
             left: 15px;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             padding: 5px 15px;
             font-family: 'Playfair Display', serif;
             font-weight: bold;
@@ -338,7 +385,7 @@
         .plan-zone:hover .zone-info {
             opacity: 1;
             visibility: visible;
-            top: 45%; 
+            top: 45%;
         }
 
         /* --- PROPERTIES LISTING --- */
@@ -360,7 +407,8 @@
             transition: var(--transition);
         }
 
-        .filter-btn.active, .filter-btn:hover {
+        .filter-btn.active,
+        .filter-btn:hover {
             background: var(--emerald-green);
             color: var(--pure-white);
         }
@@ -389,7 +437,8 @@
             height: 250px;
             position: relative;
             overflow: hidden;
-            background-color: #eee; /* Fallback color */
+            background-color: #eee;
+            /* Fallback color */
         }
 
         .card-image img {
@@ -450,7 +499,11 @@
             font-size: 0.9rem;
         }
 
-        .features span { display: flex; align-items: center; gap: 5px; }
+        .features span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
 
         /* --- CONTACT SECTION --- */
         .contact-section {
@@ -486,18 +539,21 @@
         }
 
         .contact-form {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 40px;
             border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .form-group { margin-bottom: 20px; }
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-        .form-group input, .form-group textarea {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 15px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border: none;
             border-bottom: 2px solid var(--primary-gold);
             color: white;
@@ -505,8 +561,9 @@
             transition: var(--transition);
         }
 
-        .form-group input:focus, .form-group textarea:focus {
-            background: rgba(255,255,255,0.15);
+        .form-group input:focus,
+        .form-group textarea:focus {
+            background: rgba(255, 255, 255, 0.15);
             outline: none;
         }
 
@@ -536,31 +593,70 @@
             gap: 15px;
         }
 
-        .toast.show { transform: translateX(0); }
-        .toast i { color: var(--emerald-green); font-size: 1.5rem; }
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast i {
+            color: var(--emerald-green);
+            font-size: 1.5rem;
+        }
 
         /* --- ANIMATIONS --- */
         @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } 
-            .plan-container { height: 900px; grid-template-columns: 1fr; grid-template-rows: repeat(5, 1fr); }
-            .zone-garden { grid-column: 1; grid-row: 3; }
-            .contact-wrapper { grid-template-columns: 1fr; }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .plan-container {
+                height: 900px;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 1fr);
+            }
+
+            .zone-garden {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- NAV -->
@@ -580,7 +676,7 @@
         <div class="hero-content">
             <h1>Live in the Heart of the Future</h1>
             <p>Experience architectural brilliance amidst lush botanical gardens in Downtown Dubai.</p>
-            
+
             <div class="search-container">
                 <div class="input-group">
                     <label>Location</label>
@@ -601,7 +697,8 @@
                     </select>
                 </div>
                 <div class="input-group">
-                    <button class="btn" style="width: 100%; margin-top: 20px;" onclick="filterProperties()">Find Home</button>
+                    <button class="btn" style="width: 100%; margin-top: 20px;" onclick="filterProperties()">Find
+                        Home</button>
                 </div>
             </div>
         </div>
@@ -618,7 +715,8 @@
         <div class="plan-container">
             <!-- Zone A -->
             <div class="plan-zone">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600&auto=format&fit=crop" alt="Tower A">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600&auto=format&fit=crop"
+                    alt="Tower A">
                 <div class="zone-label">Tower A: Residences</div>
                 <div class="zone-info">
                     <h4>Luxury 1-2 Bed</h4>
@@ -635,7 +733,8 @@
 
             <!-- Zone B -->
             <div class="plan-zone">
-                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=600&auto=format&fit=crop" alt="Tower B">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=600&auto=format&fit=crop"
+                    alt="Tower B">
                 <div class="zone-label">Tower B: Flats</div>
                 <div class="zone-info">
                     <h4>Studio & 1 Bed</h4>
@@ -645,7 +744,8 @@
 
             <!-- Zone C -->
             <div class="plan-zone">
-                <img src="https://images.unsplash.com/photo-1600596542815-2495db9d2dc8?q=80&w=600&auto=format&fit=crop" alt="Tower C">
+                <img src="https://images.unsplash.com/photo-1600596542815-2495db9d2dc8?q=80&w=600&auto=format&fit=crop"
+                    alt="Tower C">
                 <div class="zone-label">The Royal Penthouses</div>
                 <div class="zone-info">
                     <h4>4-5 Bed Penthouses</h4>
@@ -688,17 +788,20 @@
         </div>
         <div class="property-grid">
             <div style="text-align: center; padding: 30px; background: white; border-radius: 8px;">
-                <i class="fa-solid fa-person-swimming" style="font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 20px;"></i>
+                <i class="fa-solid fa-person-swimming"
+                    style="font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 20px;"></i>
                 <h3>Infinity Pool</h3>
                 <p style="color: #777; margin-top: 10px;">Rooftop pool overlooking the Dubai skyline.</p>
             </div>
             <div style="text-align: center; padding: 30px; background: white; border-radius: 8px;">
-                <i class="fa-solid fa-dumbbell" style="font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 20px;"></i>
+                <i class="fa-solid fa-dumbbell"
+                    style="font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 20px;"></i>
                 <h3>Private Gym</h3>
                 <p style="color: #777; margin-top: 10px;">State-of-the-art equipment with personal trainers.</p>
             </div>
             <div style="text-align: center; padding: 30px; background: white; border-radius: 8px;">
-                <i class="fa-solid fa-spa" style="font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 20px;"></i>
+                <i class="fa-solid fa-spa"
+                    style="font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 20px;"></i>
                 <h3>Wellness Spa</h3>
                 <p style="color: #777; margin-top: 10px;">Exclusive treatments and sauna facilities.</p>
             </div>
@@ -710,8 +813,9 @@
         <div class="contact-wrapper">
             <div class="contact-info">
                 <h3>Register Your Interest</h3>
-                <p style="margin-bottom: 40px; opacity: 0.8;">Schedule a private viewing of the Master Plan show flat today.</p>
-                
+                <p style="margin-bottom: 40px; opacity: 0.8;">Schedule a private viewing of the Master Plan show flat
+                    today.</p>
+
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
@@ -850,9 +954,9 @@
         // --- RENDER PROPERTIES ---
         function renderProperties(data) {
             const grid = document.getElementById('propertyGrid');
-            grid.innerHTML = ''; 
+            grid.innerHTML = '';
 
-            if(data.length === 0) {
+            if (data.length === 0) {
                 grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; font-size: 1.2rem;">No properties found matching your criteria.</p>';
                 return;
             }
@@ -877,7 +981,7 @@
                         </div>
                     </div>
                 `;
-                
+
                 card.addEventListener('click', () => {
                     showToast(`Viewing details for: ${prop.title}`);
                 });
@@ -897,7 +1001,7 @@
 
         function filterProperties() {
             const locationVal = document.getElementById('locationFilter').value.toLowerCase();
-            
+
             const filtered = propertiesData.filter(item => {
                 const typeMatch = currentTypeFilter === 'all' || item.type === currentTypeFilter;
                 const locMatch = locationVal === 'all' || item.location.toLowerCase().includes(locationVal);
@@ -913,7 +1017,7 @@
             const btn = e.target.querySelector('button');
             const originalText = btn.innerText;
             btn.innerText = 'Sending...';
-            
+
             setTimeout(() => {
                 btn.innerText = originalText;
                 e.target.reset();
@@ -925,7 +1029,7 @@
             const toast = document.getElementById('toast');
             document.getElementById('toastMessage').innerText = message;
             toast.classList.add('show');
-            
+
             setTimeout(() => {
                 toast.classList.remove('show');
             }, 3000);
@@ -961,10 +1065,11 @@
             }, observerOptions);
 
             document.querySelectorAll('.property-card, .section-header, .plan-zone').forEach(el => {
-                el.style.opacity = "0"; 
+                el.style.opacity = "0";
                 observer.observe(el);
             });
         }
     </script>
 </body>
+
 </html>
